@@ -1,0 +1,34 @@
+# Space Phone
+
+> Tienda de smartphones Android e iPhone, accesorios, combos y promociones. Garantía incluida, envíos a todo el país y atención por WhatsApp.
+
+## Pages
+
+- [Inicio](/): Landing principal con categorías, destacados y contacto.
+- [Catálogo](/catalogo): Catálogo completo de smartphones y accesorios.
+- [Smartphones](/catalogo/smartphones): Android, iPhone, nuevos y seminuevos.
+- [Android](/catalogo/smartphones/android): Smartphones Android flagship y mid-range.
+- [iPhone](/catalogo/smartphones/iphone): Toda la línea iPhone con garantía.
+- [Nuevos](/catalogo/smartphones/nuevos): Smartphones recién lanzados, sellados.
+- [Seminuevos](/catalogo/smartphones/seminuevos): Equipos revisados con garantía.
+- [Accesorios](/catalogo/accesorios): Cargadores, fundas, cables, audio y más.
+- [Cargadores](/catalogo/accesorios/cargadores): Cargadores USB-C, MagSafe e inalámbricos.
+- [Fundas](/catalogo/accesorios/fundas): Fundas para iPhone, Samsung, Pixel y más.
+- [Cables USB](/catalogo/accesorios/cables-usb): Cables USB-C, Lightning certificados.
+- [Audífonos](/catalogo/accesorios/audifonos): AirPods, Galaxy Buds, Sony y más.
+- [Power Banks](/catalogo/accesorios/power-banks): Baterías portátiles de carga rápida.
+- [Bocinas Bluetooth](/catalogo/accesorios/bocinas-bluetooth): JBL, Bose, Sony portátiles.
+- [Promociones](/promociones): Combos, ofertas y productos destacados.
+- [Combos](/promociones/combos): Paquetes con descuento de smartphone + accesorios.
+- [Ofertas temporales](/promociones/ofertas): Descuentos por tiempo limitado.
+- [Productos destacados](/promociones/destacados): Lo más vendido.
+- [Métodos de Pago](/metodos-de-pago): Formas de pago aceptadas.
+- [Efectivo](/metodos-de-pago/efectivo): Paga al recibir o en tienda.
+- [Transferencia](/metodos-de-pago/transferencia): Pago SPEI con datos bancarios.
+- [Pagos digitales](/metodos-de-pago/digitales): Próximamente tarjetas y wallets.
+- [Contacto](/contacto): WhatsApp, Messenger e Instagram.
+- [Sobre nosotros](/sobre-nosotros): Quiénes somos y nuestra misión.
+- [FAQ](/faq): Preguntas frecuentes sobre garantía, pagos y envíos.
+- [Envíos](/envios): Tiempos y costos de entrega.
+- [Garantía](/garantia): Política de garantía por categoría.
+- [Términos](/terminos): Términos y condiciones del sitio.
