@@ -35,7 +35,7 @@ function HomePage() {
       <section className="relative pt-32 pb-16 md:pt-44 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" decoding="async" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
+          <div className="absolute inset-0 bg-linear-to-b from-background/40 via-background/70 to-background" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 text-center">
           <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-widest text-on-primary-container bg-primary-container rounded-full">
