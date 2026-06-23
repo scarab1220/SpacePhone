@@ -8,9 +8,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Space Phone | Smartphones y accesorios" },
-      { name: "description", content: "Smartphones nuevos y seminuevos, accesorios originales y pagos en línea. Envíos a todo el país." },
+      {
+        name: "description",
+        content:
+          "Smartphones nuevos y seminuevos, accesorios originales y pagos en línea. Envíos a todo el país.",
+      },
       { property: "og:title", content: "Space Phone | Smartphones y accesorios" },
-      { property: "og:description", content: "Smartphones nuevos y seminuevos, accesorios y pagos en línea." },
+      {
+        property: "og:description",
+        content: "Smartphones nuevos y seminuevos, accesorios y pagos en línea.",
+      },
       { property: "og:url", content: "/" },
     ],
     links: [
@@ -34,7 +41,15 @@ function HomePage() {
     <main className="min-h-screen pb-24">
       <section className="relative pt-32 pb-16 md:pt-44 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" decoding="async" />
+          <img
+            src={heroBg}
+            alt=""
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-linear-to-b from-background/40 via-background/70 to-background" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 text-center">
@@ -48,10 +63,16 @@ function HomePage() {
             Smartphones nuevos y seminuevos, accesorios originales y pagos en línea con garantía.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <Link to="/catalogo" className="px-6 py-3 rounded-full btn-primary text-white font-semibold inline-flex items-center gap-2">
+            <Link
+              to="/catalogo"
+              className="px-6 py-3 rounded-full btn-primary text-white font-semibold inline-flex items-center gap-2"
+            >
               Ver catálogo <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
-            <Link to="/contacto" className="px-6 py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold">
+            <Link
+              to="/contacto"
+              className="px-6 py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold"
+            >
               Contacto
             </Link>
           </div>
@@ -75,10 +96,14 @@ function HomePage() {
                     <span className="material-symbols-outlined">{cat.icon ?? "category"}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-on-surface mb-1">{cat.title}</h3>
-                  {cat.description && <p className="text-sm text-on-surface-variant mb-4">{cat.description}</p>}
+                  {cat.description && (
+                    <p className="text-sm text-on-surface-variant mb-4">{cat.description}</p>
+                  )}
                   <span className="inline-flex items-center gap-1 text-sm text-primary-bright font-medium">
                     Explorar
-                    <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
+                      arrow_forward
+                    </span>
                   </span>
                 </div>
               </Link>
@@ -91,7 +116,9 @@ function HomePage() {
         <section className="max-w-7xl mx-auto px-4 md:px-8 mt-16">
           <h2 className="text-3xl font-bold text-on-surface mb-6">Productos destacados</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {featured.map((p) => <ProductCard key={p._id} product={p} />)}
+            {featured.map((p) => (
+              <ProductCard key={p._id} product={p} />
+            ))}
           </div>
         </section>
       )}
@@ -99,10 +126,16 @@ function HomePage() {
       {categories.length === 0 && featured.length === 0 && (
         <section className="max-w-3xl mx-auto px-4 md:px-8 mt-12 text-center">
           <div className="rounded-2xl bg-surface-container border border-outline-variant/20 p-8">
-            <span className="material-symbols-outlined text-5xl text-primary-bright mb-3 block">inventory_2</span>
+            <span className="material-symbols-outlined text-5xl text-primary-bright mb-3 block">
+              inventory_2
+            </span>
             <h2 className="text-xl font-semibold text-on-surface mb-2">Catálogo en preparación</h2>
-            <p className="text-on-surface-variant mb-4">El cliente está cargando productos. Vuelve pronto.</p>
-            <Link to="/contacto" className="text-primary-bright hover:underline">Mientras tanto, contáctanos</Link>
+            <p className="text-on-surface-variant mb-4">
+              El cliente está cargando productos. Vuelve pronto.
+            </p>
+            <Link to="/contacto" className="text-primary-bright hover:underline">
+              Mientras tanto, contáctanos
+            </Link>
           </div>
         </section>
       )}

@@ -26,9 +26,17 @@ export const Route = createFileRoute("/metodos-de-pago/")({
   head: () => ({
     meta: [
       { title: "Métodos de Pago | Space Phone" },
-      { name: "description", content: "Aceptamos efectivo, transferencias bancarias y tarjetas de crédito con tasa cero." },
+      {
+        name: "description",
+        content:
+          "Aceptamos efectivo, transferencias bancarias y tarjetas de crédito con tasa cero.",
+      },
       { property: "og:title", content: "Métodos de Pago | Space Phone" },
-      { property: "og:description", content: "Aceptamos efectivo, transferencias bancarias y tarjetas de crédito con tasa cero." },
+      {
+        property: "og:description",
+        content:
+          "Aceptamos efectivo, transferencias bancarias y tarjetas de crédito con tasa cero.",
+      },
       { property: "og:url", content: "/metodos-de-pago" },
     ],
     links: [{ rel: "canonical", href: "/metodos-de-pago" }],
@@ -54,7 +62,10 @@ export const Route = createFileRoute("/metodos-de-pago/")({
             <h2 className="text-lg font-semibold text-on-surface mb-1">{m.name}</h2>
             <p className="text-sm text-on-surface-variant mb-4">{m.description}</p>
             <span className="text-sm text-primary-bright font-medium inline-flex items-center gap-1">
-              Más info <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              Más info{" "}
+              <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
+                arrow_forward
+              </span>
             </span>
           </Link>
         ))}
@@ -67,8 +78,8 @@ export const Route = createFileRoute("/metodos-de-pago/")({
         <div>
           <h3 className="text-base font-semibold text-on-surface mb-1">Tasa cero disponible</h3>
           <p className="text-sm text-on-surface-variant">
-            Difiere tu compra sin intereses pagando con tarjeta de crédito de
-            Banco Agrícola, Davivienda, BAC Credomatic o Promerica.
+            Difiere tu compra sin intereses pagando con tarjeta de crédito de Banco Agrícola,
+            Davivienda, BAC Credomatic o Promerica.
           </p>
         </div>
       </div>

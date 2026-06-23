@@ -12,9 +12,15 @@ export const Route = createFileRoute("/metodos-de-pago/tarjetas")({
   head: () => ({
     meta: [
       { title: "Tarjetas de crédito | Space Phone" },
-      { name: "description", content: "Pago con tarjetas de crédito y opciones a tasa cero con bancos seleccionados." },
+      {
+        name: "description",
+        content: "Pago con tarjetas de crédito y opciones a tasa cero con bancos seleccionados.",
+      },
       { property: "og:title", content: "Tarjetas de crédito | Space Phone" },
-      { property: "og:description", content: "Pago con tarjetas de crédito y opciones a tasa cero con bancos seleccionados." },
+      {
+        property: "og:description",
+        content: "Pago con tarjetas de crédito y opciones a tasa cero con bancos seleccionados.",
+      },
       { property: "og:url", content: "/metodos-de-pago/tarjetas" },
     ],
     links: [{ rel: "canonical", href: "/metodos-de-pago/tarjetas" }],
@@ -35,8 +41,8 @@ export const Route = createFileRoute("/metodos-de-pago/tarjetas")({
         <div className="rounded-2xl bg-surface-container border border-outline-variant/20 p-6 md:p-8 space-y-3 text-on-surface-variant">
           <h3 className="text-xl font-semibold text-on-surface">Pago con tarjeta</h3>
           <p>
-            Aceptamos las principales tarjetas de crédito. Coordina tu compra
-            con nuestro equipo y procesamos el pago de forma rápida y segura.
+            Aceptamos las principales tarjetas de crédito. Coordina tu compra con nuestro equipo y
+            procesamos el pago de forma rápida y segura.
           </p>
         </div>
 
@@ -47,7 +53,9 @@ export const Route = createFileRoute("/metodos-de-pago/tarjetas")({
             </div>
             <div>
               <h3 className="text-xl font-semibold text-on-surface">Tasa cero</h3>
-              <p className="text-sm text-on-surface-variant">Difiere tu compra sin intereses con los siguientes bancos:</p>
+              <p className="text-sm text-on-surface-variant">
+                Difiere tu compra sin intereses con los siguientes bancos:
+              </p>
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">

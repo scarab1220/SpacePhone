@@ -47,7 +47,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
       add: (p, qty = 1) =>
         setItems((prev) => {
           const found = prev.find((i) => i.product._id === p._id);
-          if (found) return prev.map((i) => (i.product._id === p._id ? { ...i, qty: i.qty + qty } : i));
+          if (found)
+            return prev.map((i) => (i.product._id === p._id ? { ...i, qty: i.qty + qty } : i));
           return [...prev, { product: p, qty }];
         }),
       remove: (id) => setItems((prev) => prev.filter((i) => i.product._id !== id)),
@@ -55,7 +56,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         setItems((prev) =>
           qty <= 0
             ? prev.filter((i) => i.product._id !== id)
-            : prev.map((i) => (i.product._id === id ? { ...i, qty } : i))
+            : prev.map((i) => (i.product._id === id ? { ...i, qty } : i)),
         ),
       clear: () => setItems([]),
     };

@@ -21,7 +21,8 @@ export function InstagramChat() {
         onMouseLeave={() => setIsHovered(false)}
         className="relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110"
         style={{
-          background: "linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
+          background:
+            "linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
           boxShadow: "0 4px 20px rgba(220, 39, 67, 0.45)",
         }}
       >

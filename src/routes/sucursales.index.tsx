@@ -6,9 +6,17 @@ export const Route = createFileRoute("/sucursales/")({
   head: () => ({
     meta: [
       { title: "Sucursales | Space Phone" },
-      { name: "description", content: "Visítanos en Metrocentro, Metrosur o Plaza Mundo Soyapango. Conoce direcciones y horarios de nuestras 3 sucursales." },
+      {
+        name: "description",
+        content:
+          "Visítanos en Metrocentro, Metrosur o Plaza Mundo Soyapango. Conoce direcciones y horarios de nuestras 3 sucursales.",
+      },
       { property: "og:title", content: "Sucursales | Space Phone" },
-      { property: "og:description", content: "3 sucursales: Metrocentro, Metrosur y Plaza Mundo Soyapango. Encuentra direcciones y horarios." },
+      {
+        property: "og:description",
+        content:
+          "3 sucursales: Metrocentro, Metrosur y Plaza Mundo Soyapango. Encuentra direcciones y horarios.",
+      },
       { property: "og:url", content: "/sucursales" },
     ],
     links: [{ rel: "canonical", href: "/sucursales" }],
@@ -32,12 +40,17 @@ export const Route = createFileRoute("/sucursales/")({
             <div className="w-12 h-12 rounded-xl bg-primary-container/50 flex items-center justify-center mb-4 text-primary-bright">
               <span className="material-symbols-outlined">storefront</span>
             </div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary-bright mb-1">{b.brand}</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary-bright mb-1">
+              {b.brand}
+            </p>
             <h2 className="text-lg font-semibold text-on-surface mb-1">{b.name}</h2>
             <p className="text-sm text-on-surface-variant mb-4">{b.city}</p>
             <p className="text-sm text-on-surface-variant mb-4 flex-1">{b.address}</p>
             <span className="text-sm text-primary-bright font-medium inline-flex items-center gap-1">
-              Ver detalles <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              Ver detalles{" "}
+              <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
+                arrow_forward
+              </span>
             </span>
           </Link>
         ))}

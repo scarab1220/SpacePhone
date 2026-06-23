@@ -44,8 +44,7 @@ export function ContactForm() {
   const [sent, setSent] = useState(false);
 
   const onChange =
-    (field: keyof FormState) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setValues((v) => ({ ...v, [field]: e.target.value }));
       if (errors[field]) setErrors((er) => ({ ...er, [field]: undefined }));
     };
@@ -80,7 +79,10 @@ export function ContactForm() {
     <form onSubmit={onSubmit} noValidate className="space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2" htmlFor="cf-name">
+          <label
+            className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2"
+            htmlFor="cf-name"
+          >
             Nombre *
           </label>
           <input
@@ -96,7 +98,10 @@ export function ContactForm() {
           {errors.name && <p className="mt-1 text-xs text-brand-red">{errors.name}</p>}
         </div>
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2" htmlFor="cf-email">
+          <label
+            className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2"
+            htmlFor="cf-email"
+          >
             Correo *
           </label>
           <input
@@ -112,7 +117,10 @@ export function ContactForm() {
           {errors.email && <p className="mt-1 text-xs text-brand-red">{errors.email}</p>}
         </div>
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2" htmlFor="cf-phone">
+          <label
+            className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2"
+            htmlFor="cf-phone"
+          >
             Teléfono (opcional)
           </label>
           <input
@@ -128,7 +136,10 @@ export function ContactForm() {
           {errors.phone && <p className="mt-1 text-xs text-brand-red">{errors.phone}</p>}
         </div>
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2" htmlFor="cf-subject">
+          <label
+            className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2"
+            htmlFor="cf-subject"
+          >
             Asunto *
           </label>
           <input
@@ -144,7 +155,10 @@ export function ContactForm() {
         </div>
       </div>
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2" htmlFor="cf-message">
+        <label
+          className="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2"
+          htmlFor="cf-message"
+        >
           Mensaje *
         </label>
         <textarea
@@ -157,11 +171,7 @@ export function ContactForm() {
           placeholder="Cuéntanos en qué te podemos ayudar..."
         />
         <div className="flex justify-between mt-1">
-          {errors.message ? (
-            <p className="text-xs text-brand-red">{errors.message}</p>
-          ) : (
-            <span />
-          )}
+          {errors.message ? <p className="text-xs text-brand-red">{errors.message}</p> : <span />}
           <p className="text-xs text-on-surface-variant">{values.message.length}/1000</p>
         </div>
       </div>

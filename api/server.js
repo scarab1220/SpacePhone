@@ -9,8 +9,8 @@ export default async function handler(req, res) {
       body: ["GET", "HEAD"].includes(req.method || "GET")
         ? undefined
         : req.body
-        ? JSON.stringify(req.body)
-        : undefined,
+          ? JSON.stringify(req.body)
+          : undefined,
     });
 
     const response = await server.fetch(request);

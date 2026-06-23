@@ -10,38 +10,39 @@ Editar, guardar, listo. No se necesita base de datos ni cuenta externa.
 {
   "categories": [
     {
-      "slug": "smartphones",          // URL: /catalogo/smartphones (único, sin espacios, minúsculas)
-      "title": "Smartphones",         // Lo que ve el usuario
-      "icon": "smartphone",           // Ícono Material Symbols (https://fonts.google.com/icons)
-      "description": "...",           // Opcional
-      "order": 1,                     // Orden en menús (menor primero)
+      "slug": "smartphones", // URL: /catalogo/smartphones (único, sin espacios, minúsculas)
+      "title": "Smartphones", // Lo que ve el usuario
+      "icon": "smartphone", // Ícono Material Symbols (https://fonts.google.com/icons)
+      "description": "...", // Opcional
+      "order": 1, // Orden en menús (menor primero)
       "subcategories": [
         {
-          "slug": "iphone",           // URL: /catalogo/smartphones/iphone
+          "slug": "iphone", // URL: /catalogo/smartphones/iphone
           "title": "iPhone",
           "icon": "apple",
-          "order": 1
-        }
-      ]
-    }
+          "order": 1,
+        },
+      ],
+    },
   ],
   "products": [
     {
-      "slug": "iphone-15-pro-128",         // URL: /producto/iphone-15-pro-128 (único)
+      "slug": "iphone-15-pro-128", // URL: /producto/iphone-15-pro-128 (único)
       "title": "iPhone 15 Pro 128GB",
-      "categorySlug": "smartphones",       // Debe coincidir con un slug de category
-      "subcategorySlug": "iphone",         // Debe coincidir con un slug de subcategory
-      "priceUSD": 999.00,                  // Número, sin comillas. Siempre en USD.
-      "imageUrl": "https://...",           // URL pública de la imagen (Unsplash, Imgur, Cloudinary, etc.)
-      "badge": "Nuevo",                    // Opcional. Ej: "Oferta", "Seminuevo"
-      "description": "...",                // Opcional
-      "specs": [                           // Opcional. Tabla de especificaciones.
-        { "label": "Pantalla", "value": "6.1\" OLED" }
+      "categorySlug": "smartphones", // Debe coincidir con un slug de category
+      "subcategorySlug": "iphone", // Debe coincidir con un slug de subcategory
+      "priceUSD": 999.0, // Número, sin comillas. Siempre en USD.
+      "imageUrl": "https://...", // URL pública de la imagen (Unsplash, Imgur, Cloudinary, etc.)
+      "badge": "Nuevo", // Opcional. Ej: "Oferta", "Seminuevo"
+      "description": "...", // Opcional
+      "specs": [
+        // Opcional. Tabla de especificaciones.
+        { "label": "Pantalla", "value": "6.1\" OLED" },
       ],
-      "stock": 5,                          // Opcional
-      "featured": true                     // Opcional. Aparece en la home si es true.
-    }
-  ]
+      "stock": 5, // Opcional
+      "featured": true, // Opcional. Aparece en la home si es true.
+    },
+  ],
 }
 ```
 

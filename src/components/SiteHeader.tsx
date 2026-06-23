@@ -22,21 +22,32 @@ export function SiteHeader() {
           <span className="font-semibold text-base text-on-surface">SpacePhone</span>
         </Link>
 
-
         <nav className="hidden md:flex items-center gap-1">
-          <Link to="/" className="px-3 py-2 text-sm text-on-surface-variant hover:text-primary-bright transition-colors">
+          <Link
+            to="/"
+            className="px-3 py-2 text-sm text-on-surface-variant hover:text-primary-bright transition-colors"
+          >
             Inicio
           </Link>
           <div className="relative group">
-            <Link to="/catalogo" className="px-3 py-2 text-sm text-on-surface-variant hover:text-primary-bright transition-colors inline-flex items-center gap-1">
+            <Link
+              to="/catalogo"
+              className="px-3 py-2 text-sm text-on-surface-variant hover:text-primary-bright transition-colors inline-flex items-center gap-1"
+            >
               Catálogo
-              {nav.length > 0 && <span className="material-symbols-outlined text-base">expand_more</span>}
+              {nav.length > 0 && (
+                <span className="material-symbols-outlined text-base">expand_more</span>
+              )}
             </Link>
             {nav.length > 0 && (
               <div className="absolute top-full left-0 mt-1 min-w-[480px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all rounded-2xl bg-surface-container border border-outline-variant/20 shadow-xl p-3 grid grid-cols-2 gap-1">
                 {nav.map((cat) => (
                   <div key={cat._id} className="p-2">
-                    <Link to="/catalogo/$categoria" params={{ categoria: cat.slug }} className="block font-semibold text-sm text-on-surface mb-2 hover:text-primary-bright">
+                    <Link
+                      to="/catalogo/$categoria"
+                      params={{ categoria: cat.slug }}
+                      className="block font-semibold text-sm text-on-surface mb-2 hover:text-primary-bright"
+                    >
                       {cat.title}
                     </Link>
                     <ul className="space-y-1">
@@ -57,12 +68,19 @@ export function SiteHeader() {
               </div>
             )}
           </div>
-          <Link to="/contacto" className="px-3 py-2 text-sm text-on-surface-variant hover:text-primary-bright transition-colors">
+          <Link
+            to="/contacto"
+            className="px-3 py-2 text-sm text-on-surface-variant hover:text-primary-bright transition-colors"
+          >
             Contacto
           </Link>
         </nav>
 
-        <Link to="/carrito" className="relative w-10 h-10 rounded-full bg-surface-container hover:bg-primary-container flex items-center justify-center text-on-surface" aria-label="Carrito">
+        <Link
+          to="/carrito"
+          className="relative w-10 h-10 rounded-full bg-surface-container hover:bg-primary-container flex items-center justify-center text-on-surface"
+          aria-label="Carrito"
+        >
           <span className="material-symbols-outlined">shopping_cart</span>
           {count > 0 && (
             <span className="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center">
