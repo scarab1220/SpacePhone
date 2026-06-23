@@ -141,12 +141,16 @@ const PRODUCTS: Product[] = RAW.products
   .map((p): Product | null => {
     const cat = CATEGORY_BY_SLUG.get(p.categorySlug);
     if (!cat) {
-      console.warn(`[catalog] producto "${p.slug}" apunta a category inexistente "${p.categorySlug}"`);
+      console.warn(
+        `[catalog] producto "${p.slug}" apunta a category inexistente "${p.categorySlug}"`,
+      );
       return null;
     }
     const sub = cat.subcategories.find((s) => s.slug === p.subcategorySlug);
     if (!sub) {
-      console.warn(`[catalog] producto "${p.slug}" apunta a subcategory inexistente "${p.subcategorySlug}"`);
+      console.warn(
+        `[catalog] producto "${p.slug}" apunta a subcategory inexistente "${p.subcategorySlug}"`,
+      );
       return null;
     }
     return {
@@ -204,9 +208,7 @@ export async function fetchFeatured(limit = 8): Promise<Product[]> {
   return PRODUCTS.filter((p) => p.featured).slice(0, limit);
 }
 
-export async function fetchAllProductsForSitemap(): Promise<
-  { slug: string; updatedAt: string }[]
-> {
+export async function fetchAllProductsForSitemap(): Promise<{ slug: string; updatedAt: string }[]> {
   const now = new Date().toISOString();
   return PRODUCTS.map((p) => ({ slug: p.slug, updatedAt: now }));
 }

@@ -8,9 +8,16 @@ export const Route = createFileRoute("/catalogo/")({
   head: () => ({
     meta: [
       { title: "Catálogo | Space Phone" },
-      { name: "description", content: "Smartphones y accesorios. Explora todas las categorías del catálogo de Space Phone." },
+      {
+        name: "description",
+        content:
+          "Smartphones y accesorios. Explora todas las categorías del catálogo de Space Phone.",
+      },
       { property: "og:title", content: "Catálogo | Space Phone" },
-      { property: "og:description", content: "Smartphones y accesorios. Explora todas las categorías." },
+      {
+        property: "og:description",
+        content: "Smartphones y accesorios. Explora todas las categorías.",
+      },
       { property: "og:url", content: "/catalogo" },
     ],
     links: [{ rel: "canonical", href: "/catalogo" }],
@@ -34,7 +41,9 @@ function CatalogIndex() {
   const [cats, setCats] = useState<Category[] | null>(null);
 
   useEffect(() => {
-    fetchNavigation().then(setCats).catch(() => setCats([]));
+    fetchNavigation()
+      .then(setCats)
+      .catch(() => setCats([]));
   }, []);
 
   return (
@@ -43,7 +52,15 @@ function CatalogIndex() {
 
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" decoding="async" />
+          <img
+            src={heroBg}
+            alt=""
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 text-center">
@@ -65,7 +82,9 @@ function CatalogIndex() {
           <p className="text-on-surface-variant">Cargando catálogo…</p>
         ) : cats.length === 0 ? (
           <div className="rounded-2xl bg-surface-container border border-outline-variant/20 p-12 text-center text-on-surface-variant">
-            <span className="material-symbols-outlined text-5xl text-primary-bright mb-3 block">inventory_2</span>
+            <span className="material-symbols-outlined text-5xl text-primary-bright mb-3 block">
+              inventory_2
+            </span>
             Aún no hay categorías publicadas.
           </div>
         ) : (

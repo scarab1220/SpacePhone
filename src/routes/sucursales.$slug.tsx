@@ -72,7 +72,11 @@ export const Route = createFileRoute("/sucursales/$slug")({
   ),
   errorComponent: () => (
     <InfoPage
-      breadcrumbs={[{ label: "Inicio", to: "/" }, { label: "Sucursales", to: "/sucursales" }, { label: "Error" }]}
+      breadcrumbs={[
+        { label: "Inicio", to: "/" },
+        { label: "Sucursales", to: "/sucursales" },
+        { label: "Error" },
+      ]}
       eyebrow="Error"
       title="No pudimos cargar esta sucursal"
       icon="error"
@@ -129,7 +133,10 @@ function BranchDetail() {
           </div>
           <ul className="space-y-2 text-sm">
             {branch.hours.map((h) => (
-              <li key={h.days} className="flex justify-between gap-4 border-b border-outline-variant/10 pb-2 last:border-0">
+              <li
+                key={h.days}
+                className="flex justify-between gap-4 border-b border-outline-variant/10 pb-2 last:border-0"
+              >
                 <span className="text-on-surface-variant">{h.days}</span>
                 <span className="text-on-surface font-medium">{h.time}</span>
               </li>
@@ -143,8 +150,12 @@ function BranchDetail() {
           <span className="material-symbols-outlined">chat</span>
         </div>
         <div className="flex-1">
-          <h3 className="text-base font-semibold text-on-surface">¿Tienes preguntas antes de visitarnos?</h3>
-          <p className="text-sm text-on-surface-variant">Escríbenos por WhatsApp y con gusto te atendemos.</p>
+          <h3 className="text-base font-semibold text-on-surface">
+            ¿Tienes preguntas antes de visitarnos?
+          </h3>
+          <p className="text-sm text-on-surface-variant">
+            Escríbenos por WhatsApp y con gusto te atendemos.
+          </p>
         </div>
         <a
           href={SOCIAL_LINKS.whatsapp}

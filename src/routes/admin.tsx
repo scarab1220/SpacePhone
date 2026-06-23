@@ -418,7 +418,11 @@ function ProductForm({ cats, products }: { cats: Category[]; products: Product[]
   return (
     <section className="grid md:grid-cols-[1fr_240px] gap-6 items-start">
       <div className="space-y-4">
-        <Field label="Nombre del producto" hint="Ej: iPhone 15 Pro 128GB" error={fieldError(fieldErrors, "title")}>
+        <Field
+          label="Nombre del producto"
+          hint="Ej: iPhone 15 Pro 128GB"
+          error={fieldError(fieldErrors, "title")}
+        >
           <input
             className={inputCls(fieldError(fieldErrors, "title"))}
             value={title}
@@ -627,9 +631,7 @@ function SpecsEditor({
           </div>
         ))}
       </div>
-      {errors && errors.length > 0 && (
-        <p className="text-xs text-destructive mt-1">{errors[0]}</p>
-      )}
+      {errors && errors.length > 0 && <p className="text-xs text-destructive mt-1">{errors[0]}</p>}
       <button
         type="button"
         onClick={() => onChange([...specs, { label: "", value: "" }])}
@@ -659,11 +661,7 @@ function SubcategoryForm({ cats }: { cats: Category[] }) {
   const categorySlugs = useMemo(() => new Set(cats.map((c) => c.slug)), [cats]);
   const siblingSlugs = useMemo(
     () =>
-      new Set(
-        cats
-          .find((c) => c.slug === categorySlug)
-          ?.subcategories.map((s) => s.slug) ?? [],
-      ),
+      new Set(cats.find((c) => c.slug === categorySlug)?.subcategories.map((s) => s.slug) ?? []),
     [cats, categorySlug],
   );
 
@@ -772,10 +770,7 @@ function SubcategoryForm({ cats }: { cats: Category[] }) {
           maxLength={500}
         />
       </Field>
-      <Field
-        label="Orden (opcional, menor = primero)"
-        error={fieldError(fieldErrors, "order")}
-      >
+      <Field label="Orden (opcional, menor = primero)" error={fieldError(fieldErrors, "order")}>
         <input
           type="number"
           className={inputCls(fieldError(fieldErrors, "order"))}
@@ -817,10 +812,7 @@ function CategoryForm({ cats }: { cats: Category[] }) {
     () =>
       z.object({
         title: titleRule,
-        slug: slugRule.refine(
-          (s) => !existingSlugs.has(s),
-          "Ya existe una categoría con ese slug",
-        ),
+        slug: slugRule.refine((s) => !existingSlugs.has(s), "Ya existe una categoría con ese slug"),
         icon: iconRule,
         description: descRule,
         order: z
@@ -966,7 +958,9 @@ function ImageHostsTip() {
             rel="noreferrer"
             className="block rounded-xl bg-surface-container-high hover:border-primary/50 border border-transparent p-4 transition-all"
           >
-            <span className="material-symbols-outlined text-primary-bright mb-2 block">{h.icon}</span>
+            <span className="material-symbols-outlined text-primary-bright mb-2 block">
+              {h.icon}
+            </span>
             <p className="font-semibold text-on-surface text-sm">{h.name}</p>
             <p className="text-xs text-on-surface-variant mt-1">{h.desc}</p>
           </a>

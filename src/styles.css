@@ -13,11 +13,11 @@
   --radius-2xl: 2rem;
 
   /* Brand palette (source of truth) */
-  --color-brand-purple: #5B1547;
-  --color-brand-magenta: #92073E;
-  --color-brand-red: #C90036;
-  --color-brand-orange: #FE5627;
-  --color-brand-yellow: #FEC401;
+  --color-brand-purple: #5b1547;
+  --color-brand-magenta: #92073e;
+  --color-brand-red: #c90036;
+  --color-brand-orange: #fe5627;
+  --color-brand-yellow: #fec401;
   --color-brand-black: #000000;
 
   /* Surface scale derived from brand purple/black */
@@ -33,46 +33,46 @@
   --color-on-surface-variant: #f6d6c8;
   --color-inverse-surface: #fff4ef;
   --color-inverse-on-surface: #1b0816;
-  --color-outline: #92073E;
-  --color-outline-variant: #5B1547;
-  --color-surface-tint: #C90036;
+  --color-outline: #92073e;
+  --color-outline-variant: #5b1547;
+  --color-surface-tint: #c90036;
 
-  --color-primary: #C90036;
+  --color-primary: #c90036;
   /* Accessible accent red for TEXT on dark surfaces (WCAG AA on #000: 6.5:1).
      Use `text-primary-bright` for labels, links, icons. Keep `bg-primary` (deep red) for filled surfaces. */
-  --color-primary-bright: #FF4D6F;
+  --color-primary-bright: #ff4d6f;
   --color-on-primary: #ffffff;
-  --color-primary-container: #92073E;
+  --color-primary-container: #92073e;
   --color-on-primary-container: #ffe5ec;
-  --color-inverse-primary: #FE5627;
+  --color-inverse-primary: #fe5627;
 
-  --color-secondary: #FE5627;
+  --color-secondary: #fe5627;
   --color-on-secondary: #ffffff;
-  --color-secondary-container: #5B1547;
+  --color-secondary-container: #5b1547;
   --color-on-secondary-container: #fff4ef;
 
-  --color-tertiary: #FEC401;
+  --color-tertiary: #fec401;
   --color-on-tertiary: #000000;
-  --color-tertiary-container: #FEC401;
+  --color-tertiary-container: #fec401;
   --color-on-tertiary-container: #000000;
 
-  --color-error: #C90036;
+  --color-error: #c90036;
   --color-on-error: #ffffff;
-  --color-error-container: #5B1547;
+  --color-error-container: #5b1547;
   --color-on-error-container: #ffe5ec;
 
   --color-primary-fixed: #ffe5ec;
-  --color-primary-fixed-dim: #FE5627;
-  --color-on-primary-fixed: #5B1547;
-  --color-on-primary-fixed-variant: #92073E;
+  --color-primary-fixed-dim: #fe5627;
+  --color-on-primary-fixed: #5b1547;
+  --color-on-primary-fixed-variant: #92073e;
   --color-secondary-fixed: #ffdbd1;
-  --color-secondary-fixed-dim: #FE5627;
+  --color-secondary-fixed-dim: #fe5627;
   --color-on-secondary-fixed: #000000;
-  --color-on-secondary-fixed-variant: #92073E;
-  --color-tertiary-fixed: #FEC401;
-  --color-tertiary-fixed-dim: #FEC401;
+  --color-on-secondary-fixed-variant: #92073e;
+  --color-tertiary-fixed: #fec401;
+  --color-tertiary-fixed-dim: #fec401;
   --color-on-tertiary-fixed: #000000;
-  --color-on-tertiary-fixed-variant: #5B1547;
+  --color-on-tertiary-fixed-variant: #5b1547;
   --color-background: #000000;
   --color-on-background: #fff4ef;
   --color-surface-variant: #2a0a20;
@@ -86,13 +86,13 @@
   --color-secondary-foreground: #ffffff;
   --color-muted: #14060f;
   --color-muted-foreground: #f6d6c8;
-  --color-accent: #FE5627;
+  --color-accent: #fe5627;
   --color-accent-foreground: #ffffff;
-  --color-destructive: #C90036;
+  --color-destructive: #c90036;
   --color-destructive-foreground: #ffffff;
-  --color-border: #5B1547;
-  --color-input: #5B1547;
-  --color-ring: #FE5627;
+  --color-border: #5b1547;
+  --color-input: #5b1547;
+  --color-ring: #fe5627;
 
   /* Type scale */
   --text-display-xl: 64px;
@@ -118,41 +118,97 @@
   --font-body-lg: "Sora", sans-serif;
   --font-body-md: "Sora", sans-serif;
   --font-label-md: "Sora", sans-serif;
-
 }
 
 /* Custom-named spacing utilities (kept separate from --spacing-* to avoid
    collisions with max-w-lg, max-w-md, max-w-xs, etc.) */
-@utility p-xs   { padding: 4px; }
-@utility p-sm   { padding: 12px; }
-@utility p-base { padding: 8px; }
-@utility p-md   { padding: 24px; }
-@utility p-lg   { padding: 48px; }
-@utility p-xl   { padding: 80px; }
-@utility px-xs   { padding-inline: 4px; }
-@utility px-sm   { padding-inline: 12px; }
-@utility px-md   { padding-inline: 24px; }
-@utility px-lg   { padding-inline: 48px; }
-@utility px-margin-desktop { padding-inline: 32px; }
-@utility py-xs   { padding-block: 4px; }
-@utility py-sm   { padding-block: 12px; }
-@utility py-base { padding-block: 8px; }
-@utility py-md   { padding-block: 24px; }
-@utility py-lg   { padding-block: 48px; }
-@utility py-xl   { padding-block: 80px; }
-@utility gap-xs    { gap: 4px; }
-@utility gap-sm    { gap: 12px; }
-@utility gap-base  { gap: 8px; }
-@utility gap-md    { gap: 24px; }
-@utility gap-lg    { gap: 48px; }
-@utility gap-xl    { gap: 80px; }
-@utility gap-gutter { gap: 24px; }
-@utility top-md    { top: 24px; }
-@utility right-md  { right: 24px; }
-@utility left-md   { left: 24px; }
-@utility left-lg   { left: 48px; }
+@utility p-xs {
+  padding: 4px;
+}
+@utility p-sm {
+  padding: 12px;
+}
+@utility p-base {
+  padding: 8px;
+}
+@utility p-md {
+  padding: 24px;
+}
+@utility p-lg {
+  padding: 48px;
+}
+@utility p-xl {
+  padding: 80px;
+}
+@utility px-xs {
+  padding-inline: 4px;
+}
+@utility px-sm {
+  padding-inline: 12px;
+}
+@utility px-md {
+  padding-inline: 24px;
+}
+@utility px-lg {
+  padding-inline: 48px;
+}
+@utility px-margin-desktop {
+  padding-inline: 32px;
+}
+@utility py-xs {
+  padding-block: 4px;
+}
+@utility py-sm {
+  padding-block: 12px;
+}
+@utility py-base {
+  padding-block: 8px;
+}
+@utility py-md {
+  padding-block: 24px;
+}
+@utility py-lg {
+  padding-block: 48px;
+}
+@utility py-xl {
+  padding-block: 80px;
+}
+@utility gap-xs {
+  gap: 4px;
+}
+@utility gap-sm {
+  gap: 12px;
+}
+@utility gap-base {
+  gap: 8px;
+}
+@utility gap-md {
+  gap: 24px;
+}
+@utility gap-lg {
+  gap: 48px;
+}
+@utility gap-xl {
+  gap: 80px;
+}
+@utility gap-gutter {
+  gap: 24px;
+}
+@utility top-md {
+  top: 24px;
+}
+@utility right-md {
+  right: 24px;
+}
+@utility left-md {
+  left: 24px;
+}
+@utility left-lg {
+  left: 48px;
+}
 
-html, body {
+html,
+body {
   background-color: #000;
   color: var(--color-on-surface);
   font-family: "Sora", sans-serif;
@@ -177,7 +233,11 @@ html, body {
   word-wrap: normal;
   direction: ltr;
   vertical-align: middle;
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .glass-card,
@@ -195,24 +255,38 @@ html, body {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #92073E 0%, #C90036 50%, #FE5627 100%);
+  background: linear-gradient(90deg, #92073e 0%, #c90036 50%, #fe5627 100%);
   box-shadow: 0px 4px 20px rgba(201, 0, 54, 0.4);
   color: #fff;
   transition: all 0.3s ease;
 }
-.btn-primary:hover { transform: scale(1.02); filter: brightness(1.1); }
+.btn-primary:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
 
 .vibrant-gradient {
-  background: linear-gradient(135deg, #5B1547 0%, #92073E 30%, #C90036 60%, #FE5627 90%, #FEC401 100%);
+  background: linear-gradient(
+    135deg,
+    #5b1547 0%,
+    #92073e 30%,
+    #c90036 60%,
+    #fe5627 90%,
+    #fec401 100%
+  );
 }
 
 .hero-gradient {
-  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(91,21,71,0.85) 60%, #000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(91, 21, 71, 0.85) 60%, #000 100%);
 }
 
-.glow-primary { box-shadow: 0px 4px 20px rgba(201, 0, 54, 0.45); }
+.glow-primary {
+  box-shadow: 0px 4px 20px rgba(201, 0, 54, 0.45);
+}
 
-.text-glow { text-shadow: 0 0 20px rgba(254, 196, 1, 0.35); }
+.text-glow {
+  text-shadow: 0 0 20px rgba(254, 196, 1, 0.35);
+}
 
 .grid-pattern {
   background-image: radial-gradient(rgba(254, 86, 39, 0.12) 1px, transparent 1px);
@@ -220,13 +294,22 @@ html, body {
 }
 
 .active-nav-link {
-  color: #FEC401;
-  border-bottom: 2px solid #FE5627;
+  color: #fec401;
+  border-bottom: 2px solid #fe5627;
   padding-bottom: 4px;
 }
 
-.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #5B1547; border-radius: 10px; }
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #5b1547;
+  border-radius: 10px;
+}

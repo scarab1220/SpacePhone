@@ -36,7 +36,9 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="text-xs text-on-surface-variant mb-3 line-clamp-2">{product.description}</p>
         )}
         <div className="flex items-center justify-between">
-          <span className="font-bold text-primary-bright text-base">{formatPrice(product.priceUSD)}</span>
+          <span className="font-bold text-primary-bright text-base">
+            {formatPrice(product.priceUSD)}
+          </span>
           <button
             type="button"
             onClick={() => add(product)}
