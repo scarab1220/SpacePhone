@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import appCss from "../styles.css?url";
 import { reportError } from "../lib/error-reporting";
@@ -40,7 +41,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <h1 className="text-xl font-semibold text-on-surface">This page didn't load</h1>
         <p className="mt-2 text-sm text-on-surface-variant">Something went wrong.</p>
         <button
-          onClick={() => { router.invalidate(); reset(); }}
+          onClick={() => {
+            router.invalidate();
+            reset();
+          }}
           className="mt-6 inline-flex rounded-full px-4 py-2 btn-primary text-white"
         >
           Try again
@@ -56,15 +60,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Space Phone | Smartphones y Accesorios" },
-      { name: "description", content: "Smartphones Android, iPhone, accesorios y promociones. Garantía incluida y métodos de pago flexibles." },
+      {
+        name: "description",
+        content:
+          "Smartphones Android, iPhone, accesorios y promociones. Garantía incluida y métodos de pago flexibles.",
+      },
       { property: "og:site_name", content: "Space Phone" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Space Phone | Smartphones y Accesorios" },
-      { property: "og:description", content: "Smartphones Android, iPhone, accesorios y promociones con garantía." },
+      {
+        property: "og:description",
+        content: "Smartphones Android, iPhone, accesorios y promociones con garantía.",
+      },
       { property: "og:image", content: logoAsset },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Space Phone | Smartphones y Accesorios" },
-      { name: "twitter:description", content: "Smartphones Android, iPhone, accesorios y promociones con garantía." },
+      {
+        name: "twitter:description",
+        content: "Smartphones Android, iPhone, accesorios y promociones con garantía.",
+      },
       { name: "twitter:image", content: logoAsset },
     ],
     links: [
@@ -73,8 +87,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap",
+      },
     ],
     scripts: [
       {
@@ -83,7 +103,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Space Phone",
-          description: "Tienda de smartphones Android, iPhone y accesorios con garantía. 3 sucursales en El Salvador.",
+          description:
+            "Tienda de smartphones Android, iPhone y accesorios con garantía. 3 sucursales en El Salvador.",
           url: "/",
           telephone: "+50377793420",
           email: "spacefon.ventas@gmail.com",
@@ -93,7 +114,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               name: "CLICK•BOX Metrocentro",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Metrocentro, 11ª etapa, local Click Box, abajo de KFC y Pavito Criollo",
+                streetAddress:
+                  "Metrocentro, 11ª etapa, local Click Box, abajo de KFC y Pavito Criollo",
                 addressLocality: "San Salvador",
                 addressCountry: "SV",
               },
@@ -141,7 +163,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <head><HeadContent /></head>
+      <head>
+        <HeadContent />
+      </head>
       <body>
         {children}
         <Scripts />
@@ -167,8 +191,8 @@ function RootComponent() {
         <WhatsAppChat />
         <ScrollToTop />
         <Analytics />
+        <SpeedInsights />
       </CartProvider>
     </QueryClientProvider>
   );
 }
-

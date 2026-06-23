@@ -16,7 +16,7 @@ export const Route = createFileRoute("/catalogo/$categoria/$subcategoria")({
       : `${params.subcategoria} | ${params.categoria} | Space Phone`;
     const description = sub
       ? (sub.description ??
-          `${sub.title} en ${sub.categoryTitle}: ${products.length} producto${products.length === 1 ? "" : "s"} con garantía en Space Phone.`)
+        `${sub.title} en ${sub.categoryTitle}: ${products.length} producto${products.length === 1 ? "" : "s"} con garantía en Space Phone.`)
       : "Subcategoría del catálogo de Space Phone.";
     return {
       meta: [
@@ -50,10 +50,14 @@ export const Route = createFileRoute("/catalogo/$categoria/$subcategoria")({
     };
   },
   notFoundComponent: () => (
-    <main className="min-h-screen pt-32 px-4 text-on-surface-variant">Subcategoría no encontrada.</main>
+    <main className="min-h-screen pt-32 px-4 text-on-surface-variant">
+      Subcategoría no encontrada.
+    </main>
   ),
   errorComponent: () => (
-    <main className="min-h-screen pt-32 px-4 text-on-surface-variant">No pudimos cargar la subcategoría.</main>
+    <main className="min-h-screen pt-32 px-4 text-on-surface-variant">
+      No pudimos cargar la subcategoría.
+    </main>
   ),
   component: SubcategoryPage,
 });
@@ -71,7 +75,12 @@ function SubcategoryPage() {
           { label: sub.title },
         ]}
       />
-      <PageHero eyebrow={sub.categoryTitle} title={sub.title} description={sub.description ?? undefined} icon={sub.icon ?? "label"} />
+      <PageHero
+        eyebrow={sub.categoryTitle}
+        title={sub.title}
+        description={sub.description ?? undefined}
+        icon={sub.icon ?? "label"}
+      />
       <section className="max-w-7xl mx-auto px-4 md:px-8">
         <ProductGrid products={products} />
       </section>

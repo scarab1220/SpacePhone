@@ -74,13 +74,17 @@ export const Route = createFileRoute("/producto/$slug")({
   notFoundComponent: () => (
     <main className="min-h-screen pt-32 px-4 text-on-surface-variant text-center">
       <h1 className="text-2xl font-bold text-on-surface mb-2">Producto no encontrado</h1>
-      <Link to="/catalogo" className="text-primary-bright hover:underline">Volver al catálogo</Link>
+      <Link to="/catalogo" className="text-primary-bright hover:underline">
+        Volver al catálogo
+      </Link>
     </main>
   ),
   errorComponent: () => (
     <main className="min-h-screen pt-32 px-4 text-on-surface-variant text-center">
       <h1 className="text-2xl font-bold text-on-surface mb-2">No pudimos cargar este producto</h1>
-      <Link to="/catalogo" className="text-primary-bright hover:underline">Volver al catálogo</Link>
+      <Link to="/catalogo" className="text-primary-bright hover:underline">
+        Volver al catálogo
+      </Link>
     </main>
   ),
   component: ProductPage,
@@ -91,7 +95,9 @@ function ProductPage() {
   const [imgError, setImgError] = useState(false);
   const { add } = useCart();
 
-  const message = encodeURIComponent(`Hola, me interesa: ${product.title} (${formatPrice(product.priceUSD)})`);
+  const message = encodeURIComponent(
+    `Hola, me interesa: ${product.title} (${formatPrice(product.priceUSD)})`,
+  );
 
   return (
     <main className="min-h-screen pb-24">
@@ -99,8 +105,16 @@ function ProductPage() {
         trail={[
           { label: "Inicio", to: "/" },
           { label: "Catálogo", to: "/catalogo" },
-          { label: product.categoryTitle, to: "/catalogo/$categoria", params: { categoria: product.categorySlug } },
-          { label: product.subcategoryTitle, to: "/catalogo/$categoria/$subcategoria", params: { categoria: product.categorySlug, subcategoria: product.subcategorySlug } },
+          {
+            label: product.categoryTitle,
+            to: "/catalogo/$categoria",
+            params: { categoria: product.categorySlug },
+          },
+          {
+            label: product.subcategoryTitle,
+            to: "/catalogo/$categoria/$subcategoria",
+            params: { categoria: product.categorySlug, subcategoria: product.subcategorySlug },
+          },
           { label: product.title },
         ]}
       />
@@ -120,8 +134,12 @@ function ProductPage() {
             </span>
           )}
           <h1 className="text-3xl md:text-4xl font-bold text-on-surface mb-3">{product.title}</h1>
-          <p className="text-3xl font-bold text-primary-bright mb-6">{formatPrice(product.priceUSD)}</p>
-          {product.description && <p className="text-on-surface-variant mb-6">{product.description}</p>}
+          <p className="text-3xl font-bold text-primary-bright mb-6">
+            {formatPrice(product.priceUSD)}
+          </p>
+          {product.description && (
+            <p className="text-on-surface-variant mb-6">{product.description}</p>
+          )}
 
           {product.specs && product.specs.length > 0 && (
             <dl className="grid grid-cols-2 gap-x-4 gap-y-2 mb-8 text-sm">
@@ -153,7 +171,10 @@ function ProductPage() {
             </a>
           </div>
 
-          <Link to="/carrito" className="mt-6 inline-block text-sm text-primary-bright hover:underline">
+          <Link
+            to="/carrito"
+            className="mt-6 inline-block text-sm text-primary-bright hover:underline"
+          >
             Ver carrito →
           </Link>
         </div>

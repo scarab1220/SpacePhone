@@ -8,8 +8,20 @@
       "description": "Equipos nuevos y seminuevos con garantía.",
       "order": 1,
       "subcategories": [
-        { "slug": "iphone", "title": "iPhone", "icon": "apple", "description": "Modelos Apple con garantía oficial.", "order": 1 },
-        { "slug": "android", "title": "Android", "icon": "android", "description": "Samsung, Xiaomi, Motorola y más.", "order": 2 }
+        {
+          "slug": "iphone",
+          "title": "iPhone",
+          "icon": "apple",
+          "description": "Modelos Apple con garantía oficial.",
+          "order": 1
+        },
+        {
+          "slug": "android",
+          "title": "Android",
+          "icon": "android",
+          "description": "Samsung, Xiaomi, Motorola y más.",
+          "order": 2
+        }
       ]
     },
     {
@@ -33,7 +45,7 @@
       "title": "iPhone 15 Pro 128GB",
       "categorySlug": "smartphones",
       "subcategorySlug": "iphone",
-      "priceUSD": 999.00,
+      "priceUSD": 999.0,
       "imageUrl": "https://images.unsplash.com/photo-1592286927505-1def25115fb1?w=800",
       "badge": "Nuevo",
       "description": "Chip A17 Pro, cámara de 48 MP, cuerpo de titanio.",
@@ -50,7 +62,7 @@
       "title": "iPhone 14 128GB",
       "categorySlug": "smartphones",
       "subcategorySlug": "iphone",
-      "priceUSD": 699.00,
+      "priceUSD": 699.0,
       "imageUrl": "/catalog/iphone-14.jpg",
       "badge": "Nuevo",
       "description": "Pantalla Super Retina XDR, chip A15 Bionic, sistema de doble cámara.",
@@ -67,7 +79,7 @@
       "title": "iPhone 13 128GB Seminuevo",
       "categorySlug": "smartphones",
       "subcategorySlug": "iphone",
-      "priceUSD": 549.00,
+      "priceUSD": 549.0,
       "imageUrl": "/catalog/iphone-13.jpg",
       "badge": "Seminuevo",
       "description": "Equipo seminuevo grado A, batería >85%, incluye 6 meses de garantía.",
@@ -83,7 +95,7 @@
       "title": "Samsung Galaxy S24",
       "categorySlug": "smartphones",
       "subcategorySlug": "android",
-      "priceUSD": 799.00,
+      "priceUSD": 799.0,
       "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
       "badge": "Nuevo",
       "description": "Pantalla AMOLED 120Hz, IA integrada para fotos y traducción.",
@@ -100,7 +112,7 @@
       "title": "Xiaomi Redmi Note 13",
       "categorySlug": "smartphones",
       "subcategorySlug": "android",
-      "priceUSD": 249.00,
+      "priceUSD": 249.0,
       "imageUrl": "/catalog/xiaomi-redmi.jpg",
       "badge": "Oferta",
       "description": "Gran cámara de 108 MP y batería de 5000 mAh con carga rápida.",
@@ -116,7 +128,7 @@
       "title": "Motorola Edge 50",
       "categorySlug": "smartphones",
       "subcategorySlug": "android",
-      "priceUSD": 399.00,
+      "priceUSD": 399.0,
       "imageUrl": "/catalog/motorola-edge.jpg",
       "description": "Acabado en cuero vegano, pantalla pOLED y resistencia IP68.",
       "specs": [
@@ -131,7 +143,7 @@
       "title": "AirPods Pro 2",
       "categorySlug": "accesorios",
       "subcategorySlug": "audifonos",
-      "priceUSD": 249.00,
+      "priceUSD": 249.0,
       "imageUrl": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800",
       "description": "Cancelación activa de ruido y audio espacial personalizado.",
       "stock": 12,
@@ -142,7 +154,7 @@
       "title": "Sony WH-1000XM5",
       "categorySlug": "accesorios",
       "subcategorySlug": "audifonos",
-      "priceUSD": 399.00,
+      "priceUSD": 399.0,
       "imageUrl": "/catalog/sony-headphones.jpg",
       "badge": "Top",
       "description": "Audífonos premium over-ear con la mejor cancelación de ruido del mercado.",
@@ -240,7 +252,7 @@
       "title": "MacBook Air M3 13\"",
       "categorySlug": "accesorios",
       "subcategorySlug": "laptops",
-      "priceUSD": 1199.00,
+      "priceUSD": 1199.0,
       "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
       "badge": "Nuevo",
       "description": "Chip Apple M3, pantalla Liquid Retina de 13.6\", hasta 18h de batería.",
@@ -257,7 +269,7 @@
       "title": "HP Pavilion 15",
       "categorySlug": "accesorios",
       "subcategorySlug": "laptops",
-      "priceUSD": 749.00,
+      "priceUSD": 749.0,
       "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
       "description": "Intel Core i5 de 13ª generación, pantalla 15.6\" Full HD, ideal para trabajo y estudio.",
       "specs": [
@@ -272,7 +284,7 @@
       "title": "Lenovo IdeaPad 3",
       "categorySlug": "accesorios",
       "subcategorySlug": "laptops",
-      "priceUSD": 549.00,
+      "priceUSD": 549.0,
       "imageUrl": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
       "description": "Equipo confiable para uso diario con AMD Ryzen 5 y pantalla antirreflejo.",
       "specs": [

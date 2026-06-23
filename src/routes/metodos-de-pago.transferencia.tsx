@@ -6,9 +6,15 @@ export const Route = createFileRoute("/metodos-de-pago/transferencia")({
   head: () => ({
     meta: [
       { title: "Transferencias Bancarias | Space Phone" },
-      { name: "description", content: "Paga por transferencia bancaria. Solicita los datos de la cuenta por WhatsApp." },
+      {
+        name: "description",
+        content: "Paga por transferencia bancaria. Solicita los datos de la cuenta por WhatsApp.",
+      },
       { property: "og:title", content: "Transferencias Bancarias | Space Phone" },
-      { property: "og:description", content: "Paga por transferencia bancaria. Solicita los datos de la cuenta por WhatsApp." },
+      {
+        property: "og:description",
+        content: "Paga por transferencia bancaria. Solicita los datos de la cuenta por WhatsApp.",
+      },
       { property: "og:url", content: "/metodos-de-pago/transferencia" },
     ],
     links: [{ rel: "canonical", href: "/metodos-de-pago/transferencia" }],
@@ -45,8 +51,12 @@ export const Route = createFileRoute("/metodos-de-pago/transferencia")({
             <span className="material-symbols-outlined">chat</span>
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-on-surface">Solicita los datos por WhatsApp</h3>
-            <p className="text-sm text-on-surface-variant">Te compartimos la cuenta para realizar tu transferencia.</p>
+            <h3 className="text-lg font-semibold text-on-surface">
+              Solicita los datos por WhatsApp
+            </h3>
+            <p className="text-sm text-on-surface-variant">
+              Te compartimos la cuenta para realizar tu transferencia.
+            </p>
           </div>
           <span className="material-symbols-outlined text-primary-bright">arrow_forward</span>
         </a>
