@@ -22,7 +22,7 @@ export const Route = createFileRoute("/garantia")({
     >
       <div className="rounded-2xl bg-surface-container border border-outline-variant/20 p-6 md:p-8 mb-8">
         <div className="flex items-start gap-4">
-          <span className="material-symbols-outlined text-error text-3xl flex-shrink-0">cancel</span>
+          <span className="material-symbols-outlined text-error text-3xl shrink-0">cancel</span>
           <div>
             <h3 className="text-lg font-semibold text-on-surface">No realizamos devoluciones ni cambios por decisión del cliente</h3>
             <p className="text-sm text-on-surface-variant mt-1">

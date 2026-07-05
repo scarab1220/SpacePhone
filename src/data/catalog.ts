@@ -5,7 +5,7 @@
 import placeholderImg from "@/assets/gadget-phone.jpg";
 
 export const SOCIAL_LINKS = {
-  whatsapp: "https://wa.me/50360295678",
+  whatsapp: "https://wa.me/50377793420",
   messenger: "https://m.me/spacephone",
   instagram: "https://www.instagram.com/space_phonesv/",
   facebook: "https://facebook.com/spacephone",

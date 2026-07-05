@@ -29,300 +29,34 @@
   ],
   "products": [
     {
-      "slug": "iphone-15-pro-128",
-      "title": "iPhone 15 Pro 128GB",
-      "categorySlug": "smartphones",
-      "subcategorySlug": "iphone",
-      "priceUSD": 999.00,
-      "imageUrl": "https://images.unsplash.com/photo-1592286927505-1def25115fb1?w=800",
-      "badge": "Nuevo",
-      "description": "Chip A17 Pro, cámara de 48 MP, cuerpo de titanio.",
-      "specs": [
-        { "label": "Pantalla", "value": "6.1\" OLED" },
-        { "label": "Almacenamiento", "value": "128 GB" },
-        { "label": "Cámara", "value": "48 MP" }
-      ],
-      "stock": 5,
-      "featured": true
-    },
-    {
-      "slug": "iphone-14-128",
-      "title": "iPhone 14 128GB",
-      "categorySlug": "smartphones",
-      "subcategorySlug": "iphone",
-      "priceUSD": 699.00,
-      "imageUrl": "/catalog/iphone-14.jpg",
-      "badge": "Nuevo",
-      "description": "Pantalla Super Retina XDR, chip A15 Bionic, sistema de doble cámara.",
-      "specs": [
-        { "label": "Pantalla", "value": "6.1\" OLED" },
-        { "label": "Almacenamiento", "value": "128 GB" },
-        { "label": "Batería", "value": "Hasta 20h video" }
-      ],
-      "stock": 8,
-      "featured": true
-    },
-    {
-      "slug": "iphone-13-128-seminuevo",
-      "title": "iPhone 13 128GB Seminuevo",
-      "categorySlug": "smartphones",
-      "subcategorySlug": "iphone",
-      "priceUSD": 549.00,
-      "imageUrl": "/catalog/iphone-13.jpg",
-      "badge": "Seminuevo",
-      "description": "Equipo seminuevo grado A, batería >85%, incluye 6 meses de garantía.",
-      "specs": [
-        { "label": "Pantalla", "value": "6.1\" OLED" },
-        { "label": "Almacenamiento", "value": "128 GB" },
-        { "label": "Estado", "value": "Grado A" }
-      ],
-      "stock": 3
-    },
-    {
-      "slug": "samsung-galaxy-s24",
-      "title": "Samsung Galaxy S24",
+      "slug": "redmi-note-15",
+      "title": "Redmi Note 15",
       "categorySlug": "smartphones",
       "subcategorySlug": "android",
-      "priceUSD": 799.00,
-      "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
-      "badge": "Nuevo",
-      "description": "Pantalla AMOLED 120Hz, IA integrada para fotos y traducción.",
-      "specs": [
-        { "label": "RAM", "value": "8 GB" },
-        { "label": "Almacenamiento", "value": "256 GB" },
-        { "label": "Pantalla", "value": "6.2\" AMOLED 120Hz" }
-      ],
-      "stock": 8,
+      "priceUSD": 215,
+      "imageUrl": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-15-global-1.jpg",
+      "description": "El Xiaomi Redmi Note 15 5G (Global) es un smartphone de gama media que combina un diseño delgado con un excelente rendimiento. Cuenta con una pantalla AMOLED FHD+ de 6.77\" a 120 Hz, procesador Snapdragon 6 Gen 3 con conectividad 5G, cámara principal de 108 MP y una batería de 5520 mAh con carga rápida de 45 W, ofreciendo una experiencia fluida para trabajo, entretenimiento y fotografía.",
       "featured": true
     },
     {
-      "slug": "xiaomi-redmi-note-13",
-      "title": "Xiaomi Redmi Note 13",
+      "slug": "redmi-15c",
+      "title": "Redmi 15C",
       "categorySlug": "smartphones",
       "subcategorySlug": "android",
-      "priceUSD": 249.00,
-      "imageUrl": "/catalog/xiaomi-redmi.jpg",
-      "badge": "Oferta",
-      "description": "Gran cámara de 108 MP y batería de 5000 mAh con carga rápida.",
-      "specs": [
-        { "label": "RAM", "value": "8 GB" },
-        { "label": "Almacenamiento", "value": "256 GB" },
-        { "label": "Cámara", "value": "108 MP" }
-      ],
-      "stock": 15
-    },
-    {
-      "slug": "motorola-edge-50",
-      "title": "Motorola Edge 50",
-      "categorySlug": "smartphones",
-      "subcategorySlug": "android",
-      "priceUSD": 399.00,
-      "imageUrl": "/catalog/motorola-edge.jpg",
-      "description": "Acabado en cuero vegano, pantalla pOLED y resistencia IP68.",
-      "specs": [
-        { "label": "RAM", "value": "8 GB" },
-        { "label": "Almacenamiento", "value": "256 GB" },
-        { "label": "Resistencia", "value": "IP68" }
-      ],
-      "stock": 6
-    },
-    {
-      "slug": "airpods-pro-2",
-      "title": "AirPods Pro 2",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "audifonos",
-      "priceUSD": 249.00,
-      "imageUrl": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800",
-      "description": "Cancelación activa de ruido y audio espacial personalizado.",
-      "stock": 12,
+      "priceUSD": 155,
+      "imageUrl": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-15c-1.jpg",
+      "description": "El Xiaomi Redmi 15C 5G es un smartphone diseñado para ofrecer velocidad y autonomía. Incorpora una amplia pantalla de 6.9\" con tasa de refresco de 120 Hz, procesador MediaTek Dimensity 6300 con conectividad 5G, cámara principal de 50 MP y una potente batería de 6000 mAh con carga rápida de 33 W, ideal para el uso diario, entretenimiento y productividad.",
       "featured": true
     },
     {
-      "slug": "sony-wh-1000xm5",
-      "title": "Sony WH-1000XM5",
+      "slug": "jbl-go-5",
+      "title": "JBL GO 5",
       "categorySlug": "accesorios",
-      "subcategorySlug": "audifonos",
-      "priceUSD": 399.00,
-      "imageUrl": "/catalog/sony-headphones.jpg",
-      "badge": "Top",
-      "description": "Audífonos premium over-ear con la mejor cancelación de ruido del mercado.",
-      "specs": [
-        { "label": "Tipo", "value": "Over-ear inalámbrico" },
-        { "label": "Batería", "value": "Hasta 30h" },
-        { "label": "ANC", "value": "Sí" }
-      ],
-      "stock": 4,
+      "subcategorySlug": "otros",
+      "priceUSD": 50,
+      "imageUrl": "https://www.jbl.es/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw0d83ca71/LS_JBL_GO5_HERO_RED_0007_x4.png?sw=680&sh=680",
+      "description": "La JBL Go 5 es una bocina Bluetooth ultraportátil que ofrece el reconocido sonido JBL en un diseño compacto y resistente. Con certificación IP68 contra agua, polvo y caídas, hasta 10 horas de reproducción con Playtime Boost y conectividad Bluetooth 6.0, es ideal para llevar tu música a cualquier lugar.",
       "featured": true
-    },
-    {
-      "slug": "jbl-tune-510bt",
-      "title": "JBL Tune 510BT",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "audifonos",
-      "priceUSD": 49.99,
-      "imageUrl": "/catalog/jbl-headphones.jpg",
-      "description": "Audífonos on-ear bluetooth con 40h de batería y sonido JBL Pure Bass.",
-      "specs": [
-        { "label": "Tipo", "value": "On-ear bluetooth" },
-        { "label": "Batería", "value": "Hasta 40h" }
-      ],
-      "stock": 20
-    },
-    {
-      "slug": "cargador-usb-c-20w",
-      "title": "Cargador USB-C 20W",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "cargadores",
-      "priceUSD": 19.99,
-      "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
-      "description": "Cargador rápido USB-C compacto, compatible con iPhone y Android.",
-      "stock": 50
-    },
-    {
-      "slug": "cargador-inalambrico-15w",
-      "title": "Cargador Inalámbrico 15W",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "cargadores",
-      "priceUSD": 29.99,
-      "imageUrl": "/catalog/wireless-charger.jpg",
-      "badge": "Nuevo",
-      "description": "Base de carga inalámbrica Qi con LED indicador y protección térmica.",
-      "specs": [
-        { "label": "Potencia", "value": "15 W" },
-        { "label": "Estándar", "value": "Qi" }
-      ],
-      "stock": 25
-    },
-    {
-      "slug": "cable-usb-c-2m",
-      "title": "Cable USB-C trenzado 2m",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "cargadores",
-      "priceUSD": 14.99,
-      "imageUrl": "/catalog/usb-c-cable.jpg",
-      "description": "Cable de nylon trenzado de alta durabilidad, carga rápida hasta 100W.",
-      "specs": [
-        { "label": "Largo", "value": "2 m" },
-        { "label": "Potencia", "value": "100 W" }
-      ],
-      "stock": 80
-    },
-    {
-      "slug": "funda-silicona-magenta",
-      "title": "Funda silicona Magenta",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "fundas",
-      "priceUSD": 24.99,
-      "imageUrl": "/catalog/silicone-case.jpg",
-      "description": "Funda de silicona con tacto sedoso, interior afelpado y bordes elevados para proteger la cámara.",
-      "specs": [
-        { "label": "Material", "value": "Silicona líquida" },
-        { "label": "Compatibilidad", "value": "iPhone 14/15" }
-      ],
-      "stock": 30
-    },
-    {
-      "slug": "funda-transparente-galaxy",
-      "title": "Funda transparente Galaxy",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "fundas",
-      "priceUSD": 19.99,
-      "imageUrl": "/catalog/clear-case.jpg",
-      "description": "Funda transparente antiamarillamiento con tecnología anti-shock en las esquinas.",
-      "specs": [
-        { "label": "Material", "value": "TPU + PC" },
-        { "label": "Compatibilidad", "value": "Galaxy S23/S24" }
-      ],
-      "stock": 35
-    },
-    {
-      "slug": "macbook-air-m3-13",
-      "title": "MacBook Air M3 13\"",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "laptops",
-      "priceUSD": 1199.00,
-      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
-      "badge": "Nuevo",
-      "description": "Chip Apple M3, pantalla Liquid Retina de 13.6\", hasta 18h de batería.",
-      "specs": [
-        { "label": "Procesador", "value": "Apple M3" },
-        { "label": "RAM", "value": "8 GB" },
-        { "label": "Almacenamiento", "value": "256 GB SSD" }
-      ],
-      "stock": 4,
-      "featured": true
-    },
-    {
-      "slug": "laptop-hp-pavilion-15",
-      "title": "HP Pavilion 15",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "laptops",
-      "priceUSD": 749.00,
-      "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
-      "description": "Intel Core i5 de 13ª generación, pantalla 15.6\" Full HD, ideal para trabajo y estudio.",
-      "specs": [
-        { "label": "Procesador", "value": "Intel Core i5" },
-        { "label": "RAM", "value": "16 GB" },
-        { "label": "Almacenamiento", "value": "512 GB SSD" }
-      ],
-      "stock": 6
-    },
-    {
-      "slug": "lenovo-ideapad-3",
-      "title": "Lenovo IdeaPad 3",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "laptops",
-      "priceUSD": 549.00,
-      "imageUrl": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
-      "description": "Equipo confiable para uso diario con AMD Ryzen 5 y pantalla antirreflejo.",
-      "specs": [
-        { "label": "Procesador", "value": "AMD Ryzen 5" },
-        { "label": "RAM", "value": "8 GB" },
-        { "label": "Almacenamiento", "value": "256 GB SSD" }
-      ],
-      "stock": 5
-    },
-    {
-      "slug": "powerbank-20000",
-      "title": "Power Bank 20,000 mAh",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "otros",
-      "priceUSD": 39.99,
-      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
-      "description": "Batería portátil de alta capacidad con carga rápida PD 22.5W y doble salida USB.",
-      "specs": [
-        { "label": "Capacidad", "value": "20,000 mAh" },
-        { "label": "Potencia", "value": "22.5 W PD" }
-      ],
-      "stock": 25
-    },
-    {
-      "slug": "soporte-celular-auto",
-      "title": "Soporte para auto magnético",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "otros",
-      "priceUSD": 14.99,
-      "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
-      "description": "Soporte magnético para ventilación del auto compatible con MagSafe.",
-      "specs": [
-        { "label": "Material", "value": "Aluminio" },
-        { "label": "Compatibilidad", "value": "Universal / MagSafe" }
-      ],
-      "stock": 40
-    },
-    {
-      "slug": "mica-vidrio-templado",
-      "title": "Mica de vidrio templado 9H",
-      "categorySlug": "accesorios",
-      "subcategorySlug": "otros",
-      "priceUSD": 9.99,
-      "imageUrl": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800",
-      "description": "Protector de pantalla de vidrio templado dureza 9H con oleofóbico anti-huellas.",
-      "specs": [
-        { "label": "Dureza", "value": "9H" },
-        { "label": "Espesor", "value": "0.33 mm" }
-      ],
-      "stock": 100
     }
   ]
 }

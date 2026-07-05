@@ -1,19 +1,18 @@
 import { useState } from "react";
-
-const WHATSAPP_URL = "https://wa.me/50360295678";
+import { SOCIAL_LINKS } from "@/data/catalog";
 
 export function WhatsAppChat() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="fixed bottom-[5.5rem] right-6 z-50 flex items-center gap-3">
+    <div className="fixed bottom-22 right-6 z-50 flex items-center gap-3">
       {isHovered && (
         <div className="rounded-xl bg-surface-container-high px-4 py-2 text-sm text-on-surface shadow-lg border border-outline-variant animate-in fade-in slide-in-from-right-2 duration-200 whitespace-nowrap">
           Escríbenos por WhatsApp
         </div>
       )}
       <a
-        href={WHATSAPP_URL}
+        href={SOCIAL_LINKS.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Abrir chat de WhatsApp"
