@@ -184,7 +184,7 @@ export function ContactForm() {
         Enviar por WhatsApp
       </button>
       <p className="text-xs text-on-surface-variant">
-        Al enviar, se abrirá WhatsApp con tu mensaje listo para enviarnos.
+        Al enviar, se abrirá tu WhatsApp con tu mensaje listo para enviarnos.
       </p>
     </form>
   );
