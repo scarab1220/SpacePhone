@@ -176,7 +176,7 @@ export const Route = createFileRoute("/contacto")({
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-base font-semibold text-on-surface">Facebook</p>
-                  <p className="text-xs text-on-surface-variant truncate">@spacephone</p>
+                  <p className="text-xs text-on-surface-variant truncate">@spacePhoneSV</p>
                 </div>
                 <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary-bright group-hover:translate-x-1 transition-all">arrow_outward</span>
               </a>
