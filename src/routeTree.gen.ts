@@ -13,6 +13,7 @@ import { Route as TerminosRouteImport } from './routes/terminos'
 import { Route as SucursalesRouteImport } from './routes/sucursales'
 import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as GarantiaRouteImport } from './routes/garantia'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as EnviosRouteImport } from './routes/envios'
@@ -49,6 +50,11 @@ const SobreNosotrosRoute = SobreNosotrosRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GarantiaRoute = GarantiaRouteImport.update({
@@ -147,6 +153,7 @@ export interface FileRoutesByFullPath {
   '/envios': typeof EnviosRoute
   '/faq': typeof FaqRoute
   '/garantia': typeof GarantiaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
   '/sucursales': typeof SucursalesRouteWithChildren
@@ -170,6 +177,7 @@ export interface FileRoutesByTo {
   '/envios': typeof EnviosRoute
   '/faq': typeof FaqRoute
   '/garantia': typeof GarantiaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
   '/terminos': typeof TerminosRoute
@@ -193,6 +201,7 @@ export interface FileRoutesById {
   '/envios': typeof EnviosRoute
   '/faq': typeof FaqRoute
   '/garantia': typeof GarantiaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
   '/sucursales': typeof SucursalesRouteWithChildren
@@ -218,6 +227,7 @@ export interface FileRouteTypes {
     | '/envios'
     | '/faq'
     | '/garantia'
+    | '/robots.txt'
     | '/sitemap.xml'
     | '/sobre-nosotros'
     | '/sucursales'
@@ -241,6 +251,7 @@ export interface FileRouteTypes {
     | '/envios'
     | '/faq'
     | '/garantia'
+    | '/robots.txt'
     | '/sitemap.xml'
     | '/sobre-nosotros'
     | '/terminos'
@@ -263,6 +274,7 @@ export interface FileRouteTypes {
     | '/envios'
     | '/faq'
     | '/garantia'
+    | '/robots.txt'
     | '/sitemap.xml'
     | '/sobre-nosotros'
     | '/sucursales'
@@ -287,6 +299,7 @@ export interface RootRouteChildren {
   EnviosRoute: typeof EnviosRoute
   FaqRoute: typeof FaqRoute
   GarantiaRoute: typeof GarantiaRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreNosotrosRoute: typeof SobreNosotrosRoute
   SucursalesRoute: typeof SucursalesRouteWithChildren
@@ -329,6 +342,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/garantia': {
@@ -475,6 +495,7 @@ const rootRouteChildren: RootRouteChildren = {
   EnviosRoute: EnviosRoute,
   FaqRoute: FaqRoute,
   GarantiaRoute: GarantiaRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreNosotrosRoute: SobreNosotrosRoute,
   SucursalesRoute: SucursalesRouteWithChildren,

@@ -10,6 +10,54 @@ function truncate(s: string, max = 155) {
   return s.length <= max ? s : s.slice(0, max - 1).trimEnd() + "…";
 }
 
+function buildOfferStructuredData(p: NonNullable<ReturnType<typeof Route.useLoaderData>["product"]>) {
+  return {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: p.priceUSD.toFixed(2),
+    availability:
+      p.stock !== null && p.stock !== undefined && p.stock <= 0
+        ? "https://schema.org/OutOfStock"
+        : "https://schema.org/InStock",
+    url: `/producto/${p.slug}`,
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "SV",
+      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: 7,
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/ReturnFeesCustomerResponsibility",
+    },
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "SV",
+      },
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: "0.00",
+        currency: "USD",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 1,
+          maxValue: 2,
+          unitCode: "d",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 1,
+          maxValue: 5,
+          unitCode: "d",
+        },
+      },
+    },
+  };
+}
+
 export const Route = createFileRoute("/producto/$slug")({
   loader: async ({ params }) => {
     const product = await fetchProduct(params.slug);
@@ -55,17 +103,9 @@ export const Route = createFileRoute("/producto/$slug")({
             description: p.description ?? description,
             image: p.imageUrl,
             sku: p.slug,
+            brand: p.brand ? { "@type": "Brand", name: p.brand } : undefined,
             category: `${p.categoryTitle} > ${p.subcategoryTitle}`,
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              price: p.priceUSD.toFixed(2),
-              availability:
-                p.stock !== null && p.stock !== undefined && p.stock <= 0
-                  ? "https://schema.org/OutOfStock"
-                  : "https://schema.org/InStock",
-              url: `/producto/${p.slug}`,
-            },
+            offers: buildOfferStructuredData(p),
           }),
         },
       ],

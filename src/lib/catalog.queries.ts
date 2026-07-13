@@ -23,6 +23,7 @@ const RawCategorySchema = z.object({
 const RawProductSchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),
+  brand: z.string().min(1).nullable().optional(),
   categorySlug: z.string().min(1),
   subcategorySlug: z.string().min(1),
   priceUSD: z.number().min(0),
@@ -75,6 +76,7 @@ export type Product = {
   _id: string;
   slug: string;
   title: string;
+  brand?: string | null;
   priceUSD: number;
   imageUrl: string;
   badge?: string | null;
@@ -153,6 +155,7 @@ const PRODUCTS: Product[] = RAW.products
       _id: p.slug,
       slug: p.slug,
       title: p.title,
+      brand: p.brand,
       priceUSD: p.priceUSD,
       imageUrl: p.imageUrl,
       badge: p.badge,

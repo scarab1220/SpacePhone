@@ -31,6 +31,7 @@
     {
       "slug": "redmi-note-15",
       "title": "Redmi Note 15",
+      "brand": "Xiaomi",
       "categorySlug": "smartphones",
       "subcategorySlug": "android",
       "priceUSD": 215,
@@ -41,6 +42,7 @@
     {
       "slug": "redmi-15c",
       "title": "Redmi 15C",
+      "brand": "Xiaomi",
       "categorySlug": "smartphones",
       "subcategorySlug": "android",
       "priceUSD": 155,
@@ -51,6 +53,7 @@
     {
       "slug": "jbl-go-5",
       "title": "JBL GO 5",
+      "brand": "JBL",
       "categorySlug": "accesorios",
       "subcategorySlug": "otros",
       "priceUSD": 50,
