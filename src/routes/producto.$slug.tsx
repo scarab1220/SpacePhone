@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { useState } from "react";
 import { Breadcrumbs } from "@/components/PageLayout";
 import { useCart } from "@/lib/cart";
@@ -60,6 +60,9 @@ function buildOfferStructuredData(p: NonNullable<ReturnType<typeof Route.useLoad
 
 export const Route = createFileRoute("/producto/$slug")({
   loader: async ({ params }) => {
+    if (params.slug === "$slug") {
+      throw redirect({ to: "/catalogo" });
+    }
     const product = await fetchProduct(params.slug);
     if (!product) throw notFound();
     return { product };

@@ -1,9 +1,12 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound, redirect } from "@tanstack/react-router";
 import { Breadcrumbs, PageHero, CategoryGrid } from "@/components/PageLayout";
 import { fetchCategory, type Subcategory } from "@/lib/catalog.queries";
 
 export const Route = createFileRoute("/catalogo/$categoria/")({
   loader: async ({ params }) => {
+    if (params.categoria === "$categoria") {
+      throw redirect({ to: "/catalogo" });
+    }
     const cat = await fetchCategory(params.categoria);
     if (!cat) throw notFound();
     return { cat };
