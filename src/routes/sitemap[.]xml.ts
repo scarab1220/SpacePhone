@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { fetchAllProductsForSitemap, fetchNavigation } from "@/lib/catalog.queries";
-import { getCanonicalOrigin } from "@/lib/origin.functions";
 
 const STATIC_PATHS = [
   "/",
@@ -26,7 +25,7 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async ({ request }) => {
-        const origin = getCanonicalOrigin(request);
+        const origin = new URL(request.url).origin;
         const [nav, products] = await Promise.all([
           fetchNavigation().catch(() => []),
           fetchAllProductsForSitemap().catch(() => []),
